@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+jar {
+    baseName = 'projectEuler'
+    manifest {
+        attributes 'Main-Class': 'ru.patashnik.projecteuler.ProblemApp'
+    }
+}
+
+repositories {
+    flatDir { dirs 'libs' }
+    maven { url "http://repo1.maven.org/maven2/" }
+}
+
+dependencies {
+    testCompile('junit:junit:4.11')
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = 1.12
+}
