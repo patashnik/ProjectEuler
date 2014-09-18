@@ -5,7 +5,7 @@ import ru.patashnik.projecteuler.problems.*;
 public class ProblemApp {
 
     public static void main(String[] args) {
-        Problem pb = new Problem17();
+        Problem pb = new Problem18();
 
         long startTime = System.currentTimeMillis();
         String result = pb.solve();
