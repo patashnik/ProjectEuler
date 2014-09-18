@@ -1,10 +1,5 @@
 package ru.patashnik.projecteuler.problems;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 public class Problem18 implements Problem {
     @Override
     public int getNumber() {
@@ -35,12 +30,12 @@ public class Problem18 implements Problem {
             {63, 66,  4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31},
             { 4, 62, 98, 27, 23,  9, 70, 98, 73, 93, 38, 53, 60,  4, 23}
         };
-        
-		for (int i = matrix.length - 2; i >= 0; i--) {
+
+        for (int i = matrix.length - 2; i >= 0; i--) {
             for (int j = 0; j < matrix[i].length; j++) {
                 int left = matrix[i][j] + matrix[i+1][j];
                 int right = matrix[i][j] + matrix[i+1][j+1];
-				matrix[i][j] = (left > right) ? left : right;
+                matrix[i][j] = (left > right) ? left : right;
             }
         }
 
